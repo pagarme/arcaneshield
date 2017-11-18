@@ -55,7 +55,7 @@ class Source(BaseSource):
     def connect(self, country, index): 
         url = 'http://www.gatherproxy.com/proxylist/country/?c=%s' % country
         data = {'Country': country, 'Filter': '', 'PageIdx': index, 'Uptime': 0}
-        r = requests.post(url, data=data, timeout=3)
+        r = requests.post(url, data=data, timeout=10)
         return r.content
 
     def total_pages(self, country): 
@@ -81,6 +81,7 @@ class Source(BaseSource):
             self.lock.acquire()
             for ip in ips: 
                 ip = ip.strip()
+                ip = '{}/32'.format(ip)
                 if ip not in self.ip_list: 
                     self.ip_list.append(ip)
                 self.pbar.set_postfix(ipcount=str(len(self.ip_list)))

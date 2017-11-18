@@ -38,6 +38,7 @@ class Source(BaseSource):
             raw = raw[0].split('\n')
             ips = [ip.split(':')[0] for ip in raw if ip]
             for ip in ips:
+                ip = '{}/32'.format(ip)
                 if ip not in self.ip_list:
                     self.ip_list.append(ip)
                     self.pbar.set_postfix(ipcount=str(len(self.ip_list)))

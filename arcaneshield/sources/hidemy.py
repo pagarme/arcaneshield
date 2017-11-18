@@ -18,6 +18,7 @@ class Source(BaseSource):
                     #ports = tree.xpath('//*[@id="content-section"]/section[1]/div/table/tbody/tr/td[2]/text()')
                     for ip in ips:
                         ip = ip.strip()
+                        ip = '{}/32'.format(ip)
                         if ip not in self.ip_list:
                             self.ip_list.append(ip)
                             self.pbar.set_postfix(ipcount=str(len(self.ip_list)))

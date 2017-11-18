@@ -16,6 +16,7 @@ class Source(BaseSource):
             raw = tree.xpath('//*[@title="View this Proxy details"]/text()')
             ips = [ip.strip() for ip in raw if ip.strip()]
             for ip in ips:
+                ip = '{}/32'.format(ip)
                 if ip not in self.ip_list:
                     self.ip_list.append(ip)
                 self.pbar.set_postfix(ipcount=str(len(self.ip_list)))

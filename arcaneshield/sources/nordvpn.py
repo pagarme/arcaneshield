@@ -15,8 +15,9 @@ class Source(BaseSource):
         r = requests.get(url,timeout=10)
 
         for proxy in r.json():
-            if proxy['ip'] not in self.ip_list:
-                self.ip_list.append(proxy['ip'])
+            ip = '{}/32'.format(proxy['ip'])
+            if ip not in self.ip_list:
+                self.ip_list.append(ip)
                 self.pbar.set_postfix(ipcount=str(len(self.ip_list)))
 
         self.pbar.update(1)
