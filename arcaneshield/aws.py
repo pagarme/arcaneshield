@@ -58,6 +58,8 @@ def protect():
     print('[*] Recreating rules...')
     print('[*] This is going to require {} rules...'.format(required_rules))
 
+    rules = []
+
     for i in range(0, required_rules):
         print('[*] Creating rule Arcane Shield {}...'.format(i))
         rules.append(c.create_rule(Name='Arcane Shield {}'.format(i), MetricName='ArcaneShield{}'.format(i), ChangeToken=c.get_change_token()['ChangeToken'])['Rule']['RuleId'])
