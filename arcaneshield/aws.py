@@ -131,7 +131,7 @@ def protect():
 
         arcane = rules[cnt]
 
-        print('[*] Attaching IP Sets {} to rule {}...'.format(updates, arcane))
+        print('[*] Attaching {} IP Sets to rule {}...'.format(len(updates), arcane))
 
         c.update_rule(RuleId=arcane, ChangeToken=c.get_change_token()['ChangeToken'], Updates=updates)
 

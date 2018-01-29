@@ -30,3 +30,7 @@ aws_protect()
 
 ![Progress](https://github.com/pagarme/arcaneshield/blob/master/img/progress.png)
 ![Ending](https://github.com/pagarme/arcaneshield/blob/master/img/ending.png)
+
+## Thanks
+
+[G4mbl3r](https://github.com/mthbernardes) for initial scripts
