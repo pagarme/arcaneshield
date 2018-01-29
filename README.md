@@ -33,4 +33,4 @@ aws_protect()
 
 ## Thanks
 
-[G4mbl3r](https://github.com/mthbernardes) for initial scripts
+[G4mbl3r](https://github.com/mthbernardes) for initial scripts and several sources
