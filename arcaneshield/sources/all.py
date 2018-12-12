@@ -1,4 +1,4 @@
-from sources import cloudproxies, gatherproxy, hidemy, httptunnel, multiproxy, nordvpn, proxylist, rebroproxy, samair, tor, xroxy
+from sources import cloudproxies, gatherproxy, httptunnel, multiproxy, nordvpn, rebroproxy, samair, tor, xroxy
 from threading import Thread, Lock
 from queue import Queue
 from tqdm import tqdm, trange
@@ -6,7 +6,7 @@ import os
 
 def get_ip_list():
 
-    s_list = [cloudproxies, gatherproxy, hidemy, httptunnel, multiproxy, nordvpn, proxylist, rebroproxy, tor]
+    s_list = [cloudproxies, gatherproxy, httptunnel, multiproxy, nordvpn, rebroproxy, tor]
 
     threads = []
 
